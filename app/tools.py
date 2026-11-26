@@ -6,7 +6,7 @@
 from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 import httpx
-from config import settings
+from app.config import settings
 
 
 
@@ -53,4 +53,4 @@ def convert_currency(amount: float, from_currency: str, to_currency:str) -> dict
 
 search_tool = TavilySearch(max_results = 3, tavily_api_key = settings.tavily_api_key )
 
-tool = [search_tool,calculate_net_deal, convert_currency]
+tools = [search_tool,calculate_net_deal, convert_currency]
