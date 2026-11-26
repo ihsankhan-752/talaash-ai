@@ -37,7 +37,7 @@ prompt = PromptTemplate.from_template(template)
 
 
 
-llm = ChatGoogleGenerativeAI(api_key = GOOGLE_API_KEY, model = "gemini-3.5-flash-lite")
+llm = ChatGoogleGenerativeAI(api_key = GOOGLE_API_KEY, model = "gemini-3.5-flash-lite", temperature = 0)
 
 search_tool = TavilySearch(max_results= 3)
 
